@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">SEARCH</legend>
+                  <div class="form-group">
+                        {{ form.search.label(class="form-control-label") }}
+                        {{ form.search(class="form-control form-control-lg") }}
+                   
+                </div>
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+
+<table>
+  <tr>
+    <th>Student Number</th>
+    <th>Student Name </th>
+    <th>Student Email </th>
+    <th>Department </th>
+  </tr>
+  {% for result in results %}
+  <tr>
+    <td>{{ result.std_id }}</td>
+    <td>{{ result.std_name }}</td>
+    <td>{{ result.std_email }}</td>
+    <td>{{ result.dept_name }}</td>
+  </tr>
+  {%endfor%}
+</table>
+</div>
+{% endblock %}

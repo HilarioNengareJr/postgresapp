@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="col-md">
+          <div class="content-section">
+            <h3>SELECT ACTION</h3>
+            <p class='text-muted'> Click on link to perform action
+              <ul class="list-group">
+                <li class="list-group-item list-group-item-light"> <a class="nav-item nav-link" href="{{ url_for('instructor') }}">Insert Instructor</a>  </li>
+                <li class="list-group-item list-group-item-light"><a class="nav-item nav-link" href="{{ url_for('student') }}">Insert New Student</a> </li>
+                <li class="list-group-item list-group-item-light">  <a class="nav-item nav-link" href="{{ url_for('advisor') }}">Appoint Advisor</a>  </li>
+                <li class="list-group-item list-group-item-light"> <a class="nav-item nav-link" href="{{url_for('student_lookup') }}"> Look Up Student</a></li>
+                <li class="list-group-item list-group-item-light">  <a class="nav-item nav-link" href="{{url_for('instructor_lookup')}}">Search Instructor</a></li>
+              </ul>
+            </p>
+          </div>
+        </div>
+
+{% endblock content %}
